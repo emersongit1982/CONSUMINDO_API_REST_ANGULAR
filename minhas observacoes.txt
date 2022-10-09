@@ -1,0 +1,34 @@
+https://cursos.alura.com.br/forum/topico-error-ts2564-property-destino-has-no-initializer-and-is-not-definitely-assigned-in-the-constructor-156237
+
+se não quiser mexer no arquivo tsconfig.json declare as variaveis da classe assim:
+
+export class ClienteModel{
+public nome!: string;
+public email!: string;
+public telefone!: string;
+
+constructor(){}
+
+}
+
+********************************************************
+
+caso não traga os dados, sempre ir em inspecionar no navegador
+no meu caso eu corrigi mexendo no back end
+
+incluí no ClienteController:
+@CrossOrigin(origins = "http://localhost:4200")
+
+https://www.youtube.com/watch?v=zSBmfZ3Vek8
+
+
+*********************************************
+
+No arquivo tsconfig.json deixar a alinha abaixo como false
+assim, não precisamos criar o constructor quando criar o arquivo das classes
+
+"strict": false,
+
+
+********************************************************
+clientes.components.ts é onde escrevemos os métodos
